@@ -239,39 +239,6 @@ get_label_location <- function(ggData, label_format) {
 }
 
 
-# add_group_label <- function(label_style, repel, shadowtext, p, label_location, 
-#                             label_group, cex_label_group, ...) {
-#     if (label_style != "shadowtext") return(p)
-#     segment.size <- get_ggrepel_segsize()
-#     if (!repel) {
-#         if (shadowtext) {
-#             p <- p + geom_shadowtext(data = label_location,
-#                 aes_(x =~ x, y =~ y, label =~ label), colour = "black",
-#                 size = label_group * cex_label_group, bg.color = "white", bg.r = 0.1)
-#         } else {
-#             p <- p + geom_text(data = label_location,
-#                 aes_(x =~ x, y =~ y, label =~ label), colour = "black",
-#                 size = label_group * cex_label_group)
-#         }
-        
-#         return(p)
-#     }
-
-#     check_installed('ggrepel', 'for `add_group_label()` with `repel = TRUE`.')  
-#     if (shadowtext) {
-#         p <- p + ggrepel::geom_text_repel(data = label_location,
-#             aes_(x =~ x, y =~ y, label =~ label), colour = "black",
-#             size = label_group * cex_label_group, bg.color = "white", bg.r = 0.1,
-#             show.legend = FALSE, segment.size = segment.size, ...)
-#     } else {
-#         p <- p + ggrepel::geom_text_repel(data = label_location,
-#             aes_(x =~ x, y =~ y, label =~ label), colour = "black",
-#             size = label_group * cex_label_group, 
-#             show.legend = FALSE, segment.size = segment.size, ...)
-#     }
-#     return(p)   
-# }
-
 # ##' Add node label to a ggplot2 object
 # ##'
 # ##' @param p a ggplot2 object.
