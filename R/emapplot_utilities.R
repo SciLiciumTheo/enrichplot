@@ -217,12 +217,6 @@ node_add_alpha <- function(p, hilight_category, hilight_gene, alpha_nohilight, a
 
 
 
-# ' Adjust the layout
-# '
-# ' @param g ggraph object.
-# ' @param layout Layout of the map.
-# ' @param coords a data.frame with two columns: 'x' for X-axis coordinate and 'y' for Y-axis coordinate.
-# ' @noRd
 # adj_layout <- function(g, layout, coords) {
 #     if (!is.null(layout)) {
 #         p <- ggraph(g, layout=layout)
