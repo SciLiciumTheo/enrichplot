@@ -215,28 +215,7 @@ node_add_alpha <- function(p, hilight_category, hilight_gene, alpha_nohilight, a
 }
 
 
-# ' Get the an ggraph object
-# '
-# ' @importFrom ggplot2 ylim
-# ' @param x enrichment result.
-# ' @param enrichDf A data.frame of enrichment result.
-# ' @param mergedEnrichDf A data.frame of merged enrichment result.
-# ' @param cex_category Numeric, scale of pie plot.
-# ' @param pie Proportion of clusters in the pie chart, one of 'equal' (default) or 'Count'.
-# ' @param layout Layout of the map.
-# ' @param color a string, the column name of y for nodes colours
-# ' @param cex_line Numeric, scale of line width
-# ' @param min_edge The minimum similarity threshold for whether 
-# ' two nodes are connected, should between 0 and 1, default value is 0.2.
-# ' @param pair_sim Semantic similarity matrix.
-# ' @param method Method of calculating the similarity between nodes,
-# ' one of "Resnik", "Lin", "Rel", "Jiang" , "Wang"  and
-# ' "JC" (Jaccard similarity coefficient) methods.
-# ' @param with_edge Logical, if TRUE (the default), draw the edges of the network diagram.
-# ' @param hilight_category category nodes to be highlight.
-# ' @param alpha_hilight alpha of highlighted nodes.
-# ' @param alpha_nohilight alpha of unhighlighted nodes.
-# ' @noRd
+
 # build_ggraph <- function(x, enrichDf, mergedEnrichDf, cex_category, pie, 
 #                          layout, coords, cex_line, min_edge, pair_sim,
 #                          method, with_edge, hilight_category, alpha_hilight,
