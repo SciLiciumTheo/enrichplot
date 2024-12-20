@@ -239,15 +239,7 @@ get_label_location <- function(ggData, label_format) {
 }
 
 
-# ##' Add node label to a ggplot2 object
-# ##'
-# ##' @param p a ggplot2 object.
-# ##' @param data it is uesd as the `data` parameter of function `ggraph::geom_node_text`, a data.frame or NULL.
-# ##' @param label_size_node a numeric value to indicate the font size of the node label.
-# ##' @param cex_label_node a numeric value to indicate the scale of node label size.
-# ##' @param shadowtext  a logical value, whether to use shadow font. 
-# ##' @return a ggplot2 object.
-# ##' @noRd
+
 # add_node_label <- function(p, data, label_size_node, cex_label_node, shadowtext) {
 #     # If use 'aes_(alpha =~I(alpha))' will put an error for AsIs object.
 #     # But I(alpha) is necessory, so use 'alpha = I(data$alpha)'.
