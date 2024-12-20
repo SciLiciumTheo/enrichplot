@@ -326,17 +326,6 @@ add_ellipse <- function(p, group_legend, label_style,
 
 
 
-# get_pie_data <- function(enrichDf, pie, mergedEnrichDf, cex_pie2axis=1, p, cex_category=1) {
-#     ggData <- p$data
-#     ID_Cluster_mat <- prepare_pie_category(enrichDf = enrichDf, pie=pie) 
-#     desc <- mergedEnrichDf$Description[match(rownames(ID_Cluster_mat),
-#                                       mergedEnrichDf$Description)]
-#     i <- match(desc, ggData$name)
-#     ID_Cluster_mat$x <- ggData$x[i]
-#     ID_Cluster_mat$y <- ggData$y[i]
-#     ID_Cluster_mat$radius <- sqrt(ggData$size[i] / sum(ggData$size) * cex_category * cex_pie2axis)
-#     return(ID_Cluster_mat)
-# }
 
 # ##' Add category node(pie plot) 
 # ##'
