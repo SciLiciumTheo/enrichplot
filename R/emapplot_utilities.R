@@ -238,19 +238,7 @@ get_label_location <- function(ggData, label_format) {
         label = label_func(label_x$color2))
 }
 
-# ##' Add group label to a ggplot2 object
-# ##'
-# ##' @param label_style style of group label, one of "shadowtext" and "ggforce".
-# ##' @param repel a logical value, whether to correct the position of the label.
-# ##' @param shadowtext a logical value, whether to use shadow font. 
-# ##' @param p a ggplot2 object.
-# ##' @param label_location a data.frame with the location of group label.
-# ##' @param label_group a numeric value, default size of group label.
-# ##' @param cex_label_group scale of group labels size.
-# ##' @param ... additional parameters.
-# ##' @importFrom rlang check_installed
-# ##' @return a ggplot2 object.
-# ##' @noRd
+
 # add_group_label <- function(label_style, repel, shadowtext, p, label_location, 
 #                             label_group, cex_label_group, ...) {
 #     if (label_style != "shadowtext") return(p)
