@@ -325,15 +325,6 @@ add_ellipse <- function(p, group_legend, label_style,
 }
 
 
-# ##' add category nodes 
-# ##'
-# ##' @param p ggplot2 object
-# ##' @param cex_category Number indicating the amount by which plotting category
-# ##' nodes should be scaled relative to the default.
-# ##' @param color Variable that used to color enriched terms, e.g. 'pvalue',
-# ##' 'p.adjust' or 'qvalue'.
-# ##' @noRd
-
 
 # ##' Get data for pie plot 
 # ##'
