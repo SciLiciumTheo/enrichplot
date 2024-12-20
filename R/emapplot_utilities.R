@@ -333,19 +333,6 @@ add_ellipse <- function(p, group_legend, label_style,
 # ##' @param color Variable that used to color enriched terms, e.g. 'pvalue',
 # ##' 'p.adjust' or 'qvalue'.
 # ##' @noRd
-# add_category_nodes <- function(p, cex_category, color) {
-#     p + ggnewscale::new_scale_fill() +
-#         geom_point(shape = 21, aes_(x=~x, y=~y, fill=~color,
-#                                     size=~size, alpha=~I(alpha))) +
-#         scale_size_continuous(name = "number of genes",
-#                               range = c(3, 8) * cex_category) +
-#         # scale_fill_continuous(name = color) + 
-#         set_enrichplot_color(type = "fill", name = color) +
-#         theme(legend.title = element_text(size = 10),
-#                    legend.text  = element_text(size = 10)) +
-#         theme(panel.background = element_blank()) 
-# }
-
 
 
 # ##' Get data for pie plot 
