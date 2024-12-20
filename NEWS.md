@@ -1,3 +1,7 @@
+# enrichplot 1.27.3.001
+
++ clean up code (2024-12-20, Fri)
+
 # enrichplot 1.27.3
 
 + scale pies and add pie legend in `emapplot()` (2024-12-12, Thu, #304)
