@@ -372,13 +372,6 @@ plotting.clusterProfile <- function(clProf.reshape.df,
     # }
     p <- p + xlab("") + ylab("") + ggtitle(title) +
         theme_dose(font.size)
-    ## theme(axis.text.x = element_text(colour="black", size=font.size, vjust = 1)) +
-    ##     theme(axis.text.y = element_text(colour="black",
-    ##           size=font.size, hjust = 1)) +
-    ##               ggtitle(title)+theme_bw()
-    ## p <- p + theme(axis.text.x = element_text(angle=angle.axis.x,
-    ##                    hjust=hjust.axis.x,
-    ##                    vjust=vjust.axis.x))
     return(p)
 }
 
