@@ -327,20 +327,6 @@ add_ellipse <- function(p, group_legend, label_style,
 
 
 
-# ##' Add category node(pie plot) 
-# ##'
-# ##' @param p ggplot2 object.
-# ##' @param ID_Cluster_mat a matrix data for pie plot
-# ##' @param node_label Select which labels to be displayed,
-# ##' one of 'category', 'group', 'all' and 'none'.
-# ##' @param cex_category Number indicating the amount by which plotting category
-# ##' nodes should be scaled relative to the default.
-# ##' @param cex_pie2axis It is used to adjust the relative size of the pie chart on the coordinate axis.
-# ##' @param cex_label_category Scale of category node label size.
-# ##' @param shadowtext a logical value, whether to use shadow font.
-# ##' @param legend_n number of circle in legend
-# ##' @param label_size_category Base size of node label.
-# ##' @noRd
 # add_pie_node <- function(p, ID_Cluster_mat, node_label, 
 #                          cex_category, cex_pie2axis,
 #                          cex_label_category,
