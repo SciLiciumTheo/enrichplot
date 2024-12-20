@@ -326,43 +326,4 @@ add_ellipse <- function(p, group_legend, label_style,
 
 
 
-
-# add_pie_node <- function(p, ID_Cluster_mat, node_label, 
-#                          cex_category, cex_pie2axis,
-#                          cex_label_category,
-#                          shadowtext, legend_n,
-#                          label_size_category) {
-#     color <- NULL
-#     if(ncol(ID_Cluster_mat) > 4) {
-#         ID_Cluster_mat$alpha <- p$data$alpha
-#         p <- p + ggnewscale::new_scale_fill() + 
-#             geom_scatterpie(aes_(x=~x,y=~y,r=~radius,alpha=~I(alpha)), data=ID_Cluster_mat,
-#             cols=colnames(ID_Cluster_mat)[1:(ncol(ID_Cluster_mat)-4)],color=NA) +
-#             coord_equal() 
-
-#         if (node_label == "all" || node_label == "category") {
-#             p <- add_node_label(p = p, data = NULL, label_size_node = label_size_category,
-#                 cex_label_node = cex_label_category, shadowtext = shadowtext)
-#         }
-        
-#         p <- p + theme_void() +
-#             geom_scatterpie_legend(ID_Cluster_mat$radius, 
-#                 x=min(ID_Cluster_mat$x), y=min(ID_Cluster_mat$y),
-#                 n = legend_n,
-#                 labeller=function(x) round(sum(p$data$size) * x^2 / cex_category/ cex_pie2axis)) +
-#             labs(fill = "Cluster")
-#     } else {
-#         title <- colnames(ID_Cluster_mat)[1]
-#         p <- p + theme_void() + geom_node_point(aes_(color=~color, size=~size))
-#         if (node_label == "all" || node_label == "category") {
-#             p <- add_node_label(p = p, data = NULL, label_size_node = label_size_category,
-#                 cex_label_node = cex_label_category, shadowtext = shadowtext)
-#         }
-#         p <- p + # scale_color_continuous(name = color) +
-#             set_enrichplot_color(name = color) + 
-#             scale_size(range=c(3, 8) * cex_category)  +labs(title= title)  
-#     }  
-#     return(p)
-# }
-
 list2df <- ggtangle:::list2df
