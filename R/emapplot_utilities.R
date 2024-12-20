@@ -240,27 +240,6 @@ get_label_location <- function(ggData, label_format) {
 
 
 
-# add_node_label <- function(p, data, label_size_node, cex_label_node, shadowtext) {
-#     # If use 'aes_(alpha =~I(alpha))' will put an error for AsIs object.
-#     # But I(alpha) is necessory, so use 'alpha = I(data$alpha)'.
-#     segment.size <- get_ggrepel_segsize()
-#     if (is.null(data)) {
-#         data <- p$data
-#     }
-#     if (shadowtext) {
-#         p <- p + geom_node_text(aes_(label=~name), data = data,
-#             alpha = I(data$alpha),
-#             size = label_size_node * cex_label_node, bg.color = "white", 
-#             repel=TRUE, segment.size = segment.size)
-#     } else {
-#         p <- p + geom_node_text(aes_(label=~name), data = data,
-#             alpha = I(data$alpha),
-#             size = label_size_node * cex_label_node, repel=TRUE,
-#             segment.size = segment.size)
-#     }
-#     return(p)
-# }
-
 ##' Cluster similar nodes together by k-means
 ##' 
 ##' @param p a ggraph object.
