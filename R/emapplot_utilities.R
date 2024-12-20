@@ -323,19 +323,6 @@ add_ellipse <- function(p, group_legend, label_style,
 
     return(p)
 }
-# add_ellipse <- function(p, group_legend, label_style) {
-#     show_legend <- c(group_legend, FALSE)
-#     names(show_legend) <- c("fill", "color") 
-#     if (label_style == "shadowtext") {
-#             p <- p + ggforce::geom_mark_ellipse(aes_(x =~ x, y =~ y, color =~ color2,
-#                          fill =~ color2), show.legend = show_legend)
-#         } else {
-#             p <- p + ggforce::geom_mark_ellipse(aes_(x =~ x, y =~ y, color =~ color2,
-#                          fill =~ color2, label =~ color2), show.legend = show_legend)
-#         }
-#     if (group_legend) p <- p + scale_fill_discrete(name = "groups")
-#     return(p)
-# }
 
 
 # ##' add category nodes 
