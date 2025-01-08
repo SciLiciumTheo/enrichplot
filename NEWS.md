@@ -1,5 +1,6 @@
-# enrichplot 1.27.3.001
+# enrichplot 1.27.4
 
++ adjust pie size and category label position in `cnetplot()` (2025-01-08, Wed, #306)
 + clean up code (2024-12-20, Fri)
 
 # enrichplot 1.27.3

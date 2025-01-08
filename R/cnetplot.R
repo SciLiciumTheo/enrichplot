@@ -87,6 +87,16 @@ cnetplot.compareClusterResult <- function(
     y <- split(d$geneID, d$Description)
     gs <- lapply(y, function(item) unique(unlist(strsplit(item, split="/"))))
 
+    if (node_label == "all") {
+        node_label = "item"
+        add_category_label <- TRUE
+    } else if (node_label == "category") {
+        node_label = "none"
+        add_category_label <- TRUE
+    } else {
+        add_category_label <- FALSE
+    }
+
     p <- cnetplot(gs, layout = layout, 
         showCategory=length(gs), 
         foldChange = foldChange, 
@@ -101,7 +111,12 @@ cnetplot.compareClusterResult <- function(
         hilight_alpha = hilight_alpha,        
         ...)
 
-    add_node_pie(p, d, pie, pie_scale=size_category)
+    p <- add_node_pie(p, d, pie, pie_scale=size_category)
+
+    if (add_category_label) {
+        p <- p + geom_cnet_label(node_label='category')
+    }
+    return(p)
 }
 
 #' @importFrom ggplot2 coord_fixed
@@ -110,15 +125,18 @@ add_node_pie <- function(p, d, pie = "equal", pie_scale = 1) {
     pathway_size <- sapply(split(dd$Count, dd$Description), sum)
     if (pie == "equal") dd$Count <- 1
     dd <- tidyr::pivot_wider(dd, names_from="Cluster", values_from="Count", values_fill=0)
-    dd$pathway_size <- sqrt(pathway_size[dd$Description]/sum(pathway_size))
-
+    # dd$pathway_size <- sqrt(pathway_size[dd$Description]/sum(pathway_size))
+    dd$pathway_size <- pathway_size[dd$Description]/sum(pathway_size)
 
     p <- p %<+% dd +
         scatterpie::geom_scatterpie(aes(x=.data$x, y=.data$y, r=.data$pathway_size), 
             cols=as.character(unique(d$Cluster)), 
             legend_name = "Cluster", color=NA, pie_scale = pie_scale) +
-        scatterpie::geom_scatterpie_legend(dd$pathway_size, x=min(p$data$x), y=min(p$data$y), n=3,
-            labeller=function(x) round(sum(pathway_size) * x^2)) +
+        scatterpie::geom_scatterpie_legend(
+            dd$pathway_size, x=min(p$data$x), y=min(p$data$y), n=3,
+            # labeller=function(x) round(sum(pathway_size) * x^2)
+            labeller=function(x) round(x * sum(pathway_size))
+        ) +
         coord_fixed() +
         guides(size = "none") 
 
