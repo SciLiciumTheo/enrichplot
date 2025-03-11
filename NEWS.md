@@ -1,3 +1,7 @@
+# enrichplot 1.27.4.001
+
++ able to scale pie size for 'compareClusterResult' (2025-03-11, Tue, #304)
+
 # enrichplot 1.27.4
 
 + adjust pie size and category label position in `cnetplot()` (2025-01-08, Wed, #306)

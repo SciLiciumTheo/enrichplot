@@ -129,11 +129,11 @@ add_node_pie <- function(p, d, pie = "equal", pie_scale = 1) {
     dd$pathway_size <- pathway_size[dd$Description]/sum(pathway_size)
 
     p <- p %<+% dd +
-        scatterpie::geom_scatterpie(aes(x=.data$x, y=.data$y, r=.data$pathway_size), 
+        scatterpie::geom_scatterpie(aes(x=.data$x, y=.data$y, r=.data$pathway_size * pie_scale), 
             cols=as.character(unique(d$Cluster)), 
-            legend_name = "Cluster", color=NA, pie_scale = pie_scale) +
+            legend_name = "Cluster", color=NA) +
         scatterpie::geom_scatterpie_legend(
-            dd$pathway_size, x=min(p$data$x), y=min(p$data$y), n=3,
+            dd$pathway_size * pie_scale, x=min(p$data$x), y=min(p$data$y), n=3,
             # labeller=function(x) round(sum(pathway_size) * x^2)
             labeller=function(x) round(x * sum(pathway_size))
         ) +
