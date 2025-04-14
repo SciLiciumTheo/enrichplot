@@ -1,4 +1,4 @@
-# enrichplot 1.27.4.001
+# enrichplot 1.27.5
 
 + able to scale pie size for 'compareClusterResult' (2025-03-11, Tue, #308, #311)
 
