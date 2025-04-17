@@ -1,3 +1,7 @@
+# enrichplot 1.28.0
+
++ Bioconductor RELEASE_3_21 (2025-04-17, Thu)
+
 # enrichplot 1.27.5
 
 + able to scale pie size for 'compareClusterResult' (2025-03-11, Tue, #308, #311)
