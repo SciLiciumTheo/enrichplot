@@ -1,6 +1,6 @@
 # enrichplot 1.29.1
 
-+ throw error in `goplot()` if ontology is not one of the 'MF', 'CC' or 'BF' (2025-04-28, Mon, #768)
++ throw error in `goplot()` if ontology is not one of the 'MF', 'CC' or 'BF' (2025-04-28, Mon, clusterProfiler#768)
 
 # enrichplot 1.28.0
 
