@@ -47,7 +47,7 @@ goplot.enrichResult <- function(x, showCategory = 10, color = "p.adjust",
     }
 
     if (!toupper(onto) %in% c("MF", "CC", "BF")) {
-        stop("Ontology should be one of 'MF', 'CC' or 'BF'")
+        stop("Ontology should be one of 'MF', 'CC' or 'BP'")
     }
 
     GOANCESTOR <- getAncestors(onto)
