@@ -290,7 +290,8 @@ treeplot.enrichResult <- function(x,
                     hilight = hilight,
                     cex_category = cex_category,
                     align = align,
-                    align_tiplab = FALSE,color = color)
+                    align_tiplab = FALSE,
+                    color = color)
     # xlim <-  c(0, xlim * 3 * max(p$data$x))
     # p + coord_cartesian(xlim = xlim) +
     #   p + ggnewscale::new_scale_colour() +
@@ -709,7 +710,8 @@ group_tree <- function(hc,
                        geneClusterPanel = NULL,
                        align,
                        add_tippoint = TRUE,
-                       align_tiplab = TRUE, color) {
+                       align_tiplab = TRUE,
+                       color) {
     group <- count <- NULL
     # cluster data
     dat <- data.frame(name = names(clus), cls=paste0("cluster_", as.numeric(clus)))
@@ -784,6 +786,6 @@ group_tree <- function(hc,
                          show.legend = FALSE,
                          align = align_tiplab,
                          linesize = 0,
-                         size=leave_fontsize)
+                         size = leave_fontsize)
     return(p)
 }
